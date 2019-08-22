@@ -228,6 +228,17 @@ module.exports = (function () {
 		// Set the identifier of the widget tag
 		this._root.attrib['ios-CFBundleIdentifier'] = identifier;
 	};
+	
+	/**
+	 * Sets any attribute to the root element
+	 *
+	 * @param {string}    name    The name of the attribute
+	 * @param {string}    value    The value of the attribute
+	 */
+	Config.prototype.setRootAttribute = function (name, value) {
+		// Set the version of the widget tag
+		this._root.attrib[name] = value;
+	};
 
 	/**
 	 * Adds or updates the preference `name` with the
